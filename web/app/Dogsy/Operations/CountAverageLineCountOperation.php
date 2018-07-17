@@ -6,6 +6,12 @@ use App\Dogsy\Concerns\Operation;
 
 class CountAverageLineCountOperation extends Operation
 {
+    /**
+     * @param string $delimiter
+     * @return array|mixed
+     * @throws \App\Dogsy\Exceptions\DogsyException
+     * @throws \League\Csv\Exception
+     */
     public function run(string $delimiter) {
         $table = [];
         foreach ($this->getUserIterator($delimiter) as $user) {

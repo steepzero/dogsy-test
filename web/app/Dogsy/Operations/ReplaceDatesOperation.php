@@ -13,6 +13,7 @@ class ReplaceDatesOperation extends Operation
      * @param string $delimiter
      * @return array|mixed
      * @throws DogsyException
+     * @throws \League\Csv\Exception
      */
     public function run(string $delimiter)
     {

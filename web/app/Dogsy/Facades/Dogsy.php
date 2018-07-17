@@ -3,7 +3,6 @@
 namespace App\Dogsy\Facades;
 
 use App\Dogsy\Concerns\ServiceContract;
-use App\Dogsy\Services\DogsyOperationsService;
 use Illuminate\Support\Facades\Facade;
 
 /**
