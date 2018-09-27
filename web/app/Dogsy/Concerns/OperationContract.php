@@ -10,4 +10,5 @@ interface OperationContract
      * @return mixed
      */
     public function run(string $delimiter);
+    public function getHeaders();
 }

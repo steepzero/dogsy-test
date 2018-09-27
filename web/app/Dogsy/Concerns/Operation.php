@@ -44,4 +44,6 @@ abstract class Operation implements OperationContract
     }
 
     abstract public function run(string $delimiter);
+
+    abstract public function getHeaders();
 }

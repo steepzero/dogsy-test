@@ -8,8 +8,7 @@ use Carbon\Carbon;
 
 class ReplaceDatesOperation extends Operation
 {
-
-    /**
+   /**
      * @param string $delimiter
      * @return array|mixed
      * @throws DogsyException
@@ -54,5 +53,10 @@ class ReplaceDatesOperation extends Operation
         }
 
         return $table;
+    }
+
+    public function getHeaders()
+    {
+        return ['Users', 'Replaced Dates'];
     }
 }

@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static getSupportedDelimiters()
  * @method static isOperationSupported(string $operation)
  * @method static isDelimiterSupported(string $delimiter)
+ * @method static getOperationHeaders($operation);
  */
 class Dogsy extends Facade
 {
