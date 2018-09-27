@@ -35,6 +35,7 @@ class DogsyOperationsService implements ServiceContract
      */
     public function run(string $operation, string $delimiter)
     {
+        // TODO replicates lines 78-86 of Commands\Dogsy.php a bit of overhead when using together
         if(!$this->isOperationSupported($operation))
             throw new \InvalidArgumentException('Unsupported operation');
 
@@ -103,5 +104,10 @@ class DogsyOperationsService implements ServiceContract
     public function getSupportedDelimiters()
     {
         return array_keys($this->delimiters);
+    }
+
+    public function getOperationHeaders($operation)
+    {
+        return ($this->getOperationObject($operation))->getHeaders();
     }
 }

@@ -63,16 +63,8 @@ class Dogsy extends Command
             return;
         }
 
-
-        if ($this->argument('operation') == 'countAverageLineCount') {
-            $this->table(['User', 'AVG Lines'], $table);
-            return;
-        }
-
-        if ($this->argument('operation') == 'replaceDates') {
-            $this->table(['User','Replaces'],$table);
-            return;
-        }
+        $this->table(DogsyFacade::getOperationHeaders($this->argument('operation')), $table);
+        return;
     }
 
     protected function checkArguments()

@@ -43,4 +43,9 @@ class CountAverageLineCountOperation extends Operation
 
         return $table;
     }
+
+    public function getHeaders()
+    {
+        return ['Users', 'AVG Lines'];
+    }
 }
